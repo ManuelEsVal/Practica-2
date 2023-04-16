@@ -1,17 +1,17 @@
+class Asiento:
+    """
+    Clase para representar un asiento en un vuelo.
+    """
 
-from functions import *
-
-class Seat:
-    def __init__(self, type, num):
-        self.__type = type
-        self.__num = num
-        self.__reservations = reservations(10)
-
-    def get_tipo(self):
+    def __init__(self, numero: str, tipo: str, precio_adicional: float):
         """
-        Params:
-            None
-        Return:
-            tipo(Objet): Objeto de la clase TipoAsiento
+        Constructor de la clase.
+
+        :param numero: str, el número de asiento.
+        :param tipo: str, el tipo de asiento (tradicional o VIP).
+        :param precio_adicional: float, el precio adicional basado en el tipo de asiento y el destino.
         """
-        return self.__tipo
+        self.numero = numero
+        self.tipo = tipo
+        self.estado = True  # True si el asiento está disponible, False si está reservado
+        self.precio_adicional = precio_adicional
