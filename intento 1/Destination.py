@@ -1,9 +1,12 @@
+from reservations import *
+from random import *
 
 class Destination:
-    def __init__(self, destination:str, destination_complete_cost:int, ticket_types:list) -> None:
+    def __init__(self, destination:str, destination_complete_cost:int, seats:list) -> None:
         self.destination = destination
         self.destination_complete_cost = destination_complete_cost
-        self.ticket_types = ticket_types
+        self.seats = seats
+        self.dates = sample(available_dates(), 10)
                
     def tickets_cost_per_unit(self, first_ticket_porcentaje:int, second_porcentaje_porcentaje:int):
         self.first_ticket_porcentaje = first_ticket_porcentaje
@@ -24,4 +27,4 @@ class Destination:
         self.third_option = third_option
         
         self.destination_list = [self.first_option, self.second_option, self.third_option]
-        pass
+        
