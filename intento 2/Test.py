@@ -7,6 +7,7 @@ from SeatType import *
 asiento_vip = SeatType('VIP', 0.50)
 asiento_trad = SeatType('Tradicional', 0.10)
 destinos = [ Destination('Texas', 10000), Destination('Dubai', 20000), Destination('Cancun', 7000)]
+lugares = [destinos[0].get_destination(), destinos[1].get_destination(), destinos[2].get_destination()]
 
 #--------------------------#---------------------------#-------------------------------#
 #--------------------------#---------------------------#-------------------------------#
@@ -42,10 +43,11 @@ give_D3costs()
 #--------------------------#---------------------------#-------------------------------#
 #--------------------------#---------------------------#-------------------------------#
 
-reservaciones = Booking(10)
-reservaciones.reservations()
+reservaciones = Booking(10, lugares)
+print(reservaciones.reservations())
+print(reservaciones.available_dates())
 
 asientos = Seats(50)
-asientos_tipos = [asiento_trad.get_class(), asiento_vip.get_class()]
+""" asientos_tipos = [asiento_trad.get_class(), asiento_vip.get_class()]
 lista_asientos = asientos.seat_distribution( asientos_tipos,'T', 'V', 30)
-
+ """
