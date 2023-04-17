@@ -15,7 +15,7 @@ class Seats:
         self.__num = num
         
         self.seat_list = [self.__class, self.__num]
-        return 
+        return self.seat_list
     
     def seat_distribution(self, class_list:list, class_letter1:str, class_letter2:str, fist_range:int):        
         self.class_letter1 = class_letter1
@@ -24,19 +24,23 @@ class Seats:
         self.first_range = fist_range
         
         seat_class = class_list
+        print(seat_class)
         
-        seat = []
         j = 0
+        # print(self.__seats_number)
+        seat = []
+        
         for i in range(self.__seats_number + 1):
 
             if i <= self.first_range:
-                aux = self.class_letter1
+                aux = str(self.class_letter1)
                 _type = seat_class[0]
             else:
-                aux = self.class_letter2
+                aux = str(self.class_letter2)
                 _type = seat_class[1]
 
             j += 1
+            
             if j >= 10 and j <= self.first_range:
                 num = aux + str(j)
             elif j > self.first_range:
@@ -44,10 +48,9 @@ class Seats:
                 continue
             else:
                 num = aux + "0"+ str(j)
-            print(i)
+            print(num)
             
             seat.append(self.seat( _type, num))
-        
-        print(seat_class)
+            
         print(seat)
       
