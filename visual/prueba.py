@@ -1,7 +1,7 @@
 
-from tipoAsi import TipoAsiento
+from visual.tipoAsi import TipoAsiento
 from asiento import Asiento
-from destino import Vuelo_destino
+from visual.destino import Vuelo_destino
 
 #Dos tipos de asiento (2 objetos)
 #Tradicional, #VIP

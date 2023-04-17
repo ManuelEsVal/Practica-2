@@ -1,5 +1,5 @@
 
-from funciones import *
+from visual.funciones import *
 from random import *
 
 class Vuelo_destino:

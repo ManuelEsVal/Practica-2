@@ -1,5 +1,5 @@
 class SeatType:
-    def __init__(self, seat_class, porcent):
+    def __init__(self, seat_class:str, porcent:float):
         self.__seat_class = seat_class
         self.__porcent = porcent
         

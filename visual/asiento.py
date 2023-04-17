@@ -1,5 +1,5 @@
 
-from funciones import *
+from visual.funciones import *
 
 class Asiento:
     def __init__(self, tipo, num):
