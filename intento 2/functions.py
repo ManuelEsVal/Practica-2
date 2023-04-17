@@ -36,18 +36,16 @@ def give_D3costs():
     print(asiento_trad.get_class(),':',costo_trad_d3)
     print(asiento_vip.get_class(),':',costo_vip_d3)
 
-""" give_D1costs()
-give_D2costs()
-give_D3costs()
- """
-#--------------------------#---------------------------#-------------------------------#
-#--------------------------#---------------------------#-------------------------------#
-
 reservaciones = Booking(10, lugares)
-print(reservaciones.reservations())
-print(reservaciones.available_dates())
+estado_lista_reservaciones = reservaciones.reservations()
+lista_fechas = reservaciones.available_dates()
 
 asientos = Seats(50)
-""" asientos_tipos = [asiento_trad.get_class(), asiento_vip.get_class()]
+asientos_tipos = [asiento_trad.get_class(), asiento_vip.get_class()]
 lista_asientos = asientos.seat_distribution( asientos_tipos,'T', 'V', 30)
- """
+#--------------------------#---------------------------#-------------------------------#
+#--------------------------#---------------------------#-------------------------------#
+
+
+
+
