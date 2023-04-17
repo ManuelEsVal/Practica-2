@@ -6,10 +6,6 @@ class Seats:
     def __init__(self, seats_number:int) -> None:
         self.__seats_number = seats_number
     
-    def seat_cost(self):
-        self.__ticket_cost = (self.get_destination_cost() * ( 1 +  self.get_porcent() ))
-        return self.__ticket_cost
-    
     def seat(self, _class, num):
         self.__class = _class
         self.__num = num
@@ -23,7 +19,7 @@ class Seats:
         self.class_list = class_list
         self.first_range = fist_range
         
-        seat_class = class_list
+        seat_class = class_list #[trad, vip]
         print(seat_class)
         
         j = 0
