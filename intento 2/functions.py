@@ -40,9 +40,9 @@ reservaciones = Booking(10, lugares)
 estado_lista_reservaciones = reservaciones.reservations()
 lista_fechas = reservaciones.available_dates()
 
-asientos = Seats(50)
+""" asientos = Seats(50)
 asientos_tipos = [asiento_trad.get_class(), asiento_vip.get_class()]
-lista_asientos = asientos.seat_distribution( asientos_tipos,'T', 'V', 30)
+lista_asientos = asientos.seat_distribution( asientos_tipos,'T', 'V', 30) """
 #--------------------------#---------------------------#-------------------------------#
 #--------------------------#---------------------------#-------------------------------#
 
