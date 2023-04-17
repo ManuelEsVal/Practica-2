@@ -14,8 +14,11 @@ destinos = [ Destination( 'Texas', 10000)\
            , Destination( 'Dubai', 20000)\
            , Destination( 'Cancun', 7000)]
 
+# costo_trad = asiento_trad.seat_cost()
+# costo_vip = 
+
 reservaciones = Booking(10)
 
 reservaciones.reservations()
 
-distribucion = asientos.seat_distribution( asientos_tipos,'T', 'V', 30)
+# lista_asientos = asientos.seat_distribution( asientos_tipos,'T', 'V', 30)

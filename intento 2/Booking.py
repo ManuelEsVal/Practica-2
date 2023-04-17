@@ -16,5 +16,5 @@ class Booking:
         reservaciones = []
         for i in range(self.n):
             reservaciones.append(True)
-        # print(reservaciones)
+        print(reservaciones)
         return reservaciones
