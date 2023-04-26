@@ -1,3 +1,8 @@
+
+"""
+Falta docstring y muchas cosas más
+"""
+
 class Destination:
     def __init__(self, destination:str, destination_cost:int) -> None:
         self.__destination = destination

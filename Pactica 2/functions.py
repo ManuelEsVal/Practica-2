@@ -4,15 +4,31 @@ from Seats import *
 from SeatType import *
 
 
+"""
+Bien
+"""
 asiento_vip = SeatType('VIP', 0.50)
 asiento_trad = SeatType('Tradicional', 0.10)
+"""
+Destinos debe tener los 50 asientos
+y luego una clase donde se ponga esta lista con los 3 destinos
+"""
 destinos = [ Destination('Texas', 10000), Destination('Dubai', 20000), Destination('Cancun', 7000)]
+
+"""
+NOOOOOO, para obtener los luagres se debe hacer desde dentro de un método, si lo dejamos aquí fuera mejor
+hacemos toda la practica como un simple script
+"""
 lugares = [destinos[0].get_destination(), destinos[1].get_destination(), destinos[2].get_destination()]
 
 #--------------------------#---------------------------#-------------------------------#
 #--------------------------#---------------------------#-------------------------------#
 
 def give_D1costs():
+    """
+    Notemos como al objeto asiento_trad se le va a calcular el precio con el destino y con un método del mismo objeto,
+    que claramente puede consiguir desde dentro ya que si se lo vamos a pedir pues existe dentro.
+    """
     costo_trad_d1 = asiento_trad.seat_cost(destinos[0].get_destination_cost(), asiento_trad.get_porcent())
     costo_vip_d1 = asiento_vip.seat_cost(destinos[0].get_destination_cost(), asiento_vip.get_porcent())
     

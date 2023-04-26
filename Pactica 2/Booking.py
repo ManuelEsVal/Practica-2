@@ -7,11 +7,18 @@ class Booking:
         self.n = n
         self.dates = []
         self.today = date.today()
+        """
+        De hechos les pedí 10 fechas aleatorias, para mostrar las 10 por cada destino
+        """
         self.tomorrow = self.today + timedelta(days=12)
         
     def available_dates(self):
         for obj in self.obj_list:
             date_list = []
+            """
+            pero se pueden repetir porque no hay mucha diferencia de días.
+            Además si si n vale por ejemplo 50, su lista de 50 fechas va a tener fechas repetidas
+            """
             for i in range(self.n):
                 start_date = self.today
                 end_date = self.tomorrow
@@ -22,7 +29,10 @@ class Booking:
                 date_list.append(random_date)
             self.dates.append(date_list)
         return date_list
-    
+
+    """
+    Solo tenemos una lista de booleanos verdaderos
+    """
     def reservations(self):
         reservaciones = []
         for i in range(self.n):

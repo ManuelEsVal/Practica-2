@@ -6,9 +6,17 @@ from SeatType import *
 
 name = input('Nombre: ')
 
+"""
+Y el usuario cómo sabe a donde puede ir si no se le muestran los destinos?
+"""
 print('\nHola',name,'¿a dondé te gustaría ir?')
 
 t = 0
+"""
+Recuerden que estamos modelando entidades, no scripts.
+lugares es una simple lista, y no queremos trabajar con la lista, sino con un método de una clase
+que dentro tenga el código que tinen aquí.
+"""
 for i in lugares:
     t += 1
     print('\n',str(t) + '-',i,'\n')
